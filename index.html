@@ -3,51 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Portfolio</title>
+    <title>Mohamed Bouleghlem | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
+    <nav class="navbar">
+        <div class="nav-content container">
+            <a href="#home" class="logo">MB.</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
         <div class="container">
-            <h1>Hi, I'm <span class="highlight">Your Name</span>.</h1>
-            <p class="subtitle"> Engineering Student </p>
+            <p class="greeting">Hello, world! I am</p>
+            <h1 class="gradient-text">Mohamed Bouleghlem</h1>
+            <h2 class="role">Engineering Student @ ENSTA Paris</h2>
+            <p class="hero-desc">I'm an engineering student specializing in software development, machine learning, and advanced mathematics, looking to solve complex, real-world problems.</p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="resume.pdf" class="btn btn-outline" target="_blank">View Resume</a>
+            </div>
         </div>
     </header>
 
-    <main class="container">
-        <section id="about">
-            <h2>About Me</h2>
-            <p>About blank</p>
+    <main>
+        <section id="about" class="container split-section">
+            <div class="about-text">
+                <h2 class="section-title">About Me</h2>
+                <p>I am currently pursuing my MSc & BSc in Engineering at ENSTA Paris (Institute Polytechnique of Paris), alongside a BSc in Fundamental Physics at Paris-Saclay University.</p>
+                <p>Beyond my rigorous coursework in optimization, statistics, and machine learning, I serve as the Treasurer for my school's Physics and Robotics associations. I am also a passionate tutor for the #GENIUS program, empowering high school students from underprivileged backgrounds to succeed in STEM.</p>
+            </div>
+            
+            <div id="skills" class="skills-container">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-grid">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">C / C++</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">TensorFlow</span>
+                    <span class="skill-tag">PyTorch</span>
+                    <span class="skill-tag">NumPy & Pandas</span>
+                    <span class="skill-tag">Playwright</span>
+                </div>
+            </div>
         </section>
 
-        <section id="projects">
-            <h2>Featured Projects</h2>
+        <section id="education" class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card">
+                        <h3>ENSTA Paris - Institute Polytechnique of Paris</h3>
+                        <p class="timeline-date">Expected Graduation: 2027</p>
+                        <p><strong>MSc & BSc in Engineering</strong></p>
+                        <p class="gpa">GPA: 4.22/4.3 (Top 5% of Class)</p>
+                        <p class="coursework"><strong>Relevant Coursework:</strong> Optimization, DSA, Statistics, Machine & Statistical Learning, Operations Research, Game Theory.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card">
+                        <h3>Paris-Saclay University</h3>
+                        <p class="timeline-date">2024 - 2025</p>
+                        <p><strong>BSc in Fundamental Physics</strong></p>
+                        <p class="coursework"><strong>Relevant Coursework:</strong> Quantum Mechanics, Analytical & Statistical Mechanics, Relativity, Electromagnetism, Optics.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="container">
+            <h2 class="section-title">Featured Projects</h2>
             <div class="project-grid">
-                <div class="project-card">
-                    <h3>Project One</h3>
-                    <p>About blank</p>
-                    <a href="#" class="btn" target="_blank">View on GitHub</a>
+                
+                <div class="card project-card">
+                    <div class="project-header">
+                        <h3>Autonomous Car Race</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/siphux" target="_blank" title="GitHub">🔗 Code</a>
+                        </div>
+                    </div>
+                    <p>Developed an algorithm adapting existing Computer Vision models for real-time boundary and obstacle detection. Merged LiDAR and camera data to drastically improve performance and accuracy.</p>
+                    <div class="project-tech">
+                        <span>Computer Vision</span>
+                        <span>LiDAR</span>
+                        <span>Python</span>
+                    </div>
                 </div>
-                <div class="project-card">
-                    <h3>Project Two</h3>
-                    <p>About blank</p>
-                    <a href="#" class="btn" target="_blank">Live Demo</a>
+
+                <div class="card project-card">
+                    <div class="project-header">
+                        <h3>CIFAR-10 Inference Optimization</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/siphux" target="_blank" title="GitHub">🔗 Code</a>
+                        </div>
+                    </div>
+                    <p>Developed lightweight models and compressed existing ones using quantization, pruning, and Low Rank Factorization to achieve lower inference times with minimal performance drops.</p>
+                    <div class="project-tech">
+                        <span>Machine Learning</span>
+                        <span>TensorFlow</span>
+                        <span>PyTorch</span>
+                    </div>
                 </div>
+
+                <div class="card project-card">
+                    <div class="project-header">
+                        <h3>Tetris in C++</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/siphux" target="_blank" title="GitHub">🔗 Code</a>
+                        </div>
+                    </div>
+                    <p>Designed a fully functional Tetris game using an MVC architecture and Object-Oriented paradigms. Implemented Online Multiplayer utilizing separate threads for gameplay and network handling.</p>
+                    <div class="project-tech">
+                        <span>C++</span>
+                        <span>OOP</span>
+                        <span>Multithreading</span>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <h2>Let's Connect</h2>
-            <ul class="social-links">
-                <li><a href="mailto:mohamed.bouleghlem@ensta.fr">Email</a></li>
-                <li><a href="https://github.com/siphux" target="_blank">GitHub</a></li>
-                <li><a href="https://linkedin.com/in/mohamed-bouleghlem" target="_blank">LinkedIn</a></li>
-            </ul>
-            <p class="copyright">&copy; 2026 Mohamed Bouleghlem. Built with GitHub Pages.</p>
+    <footer id="contact">
+        <div class="container text-center">
+            <h2 class="section-title">Get In Touch</h2>
+            <p>I am constantly exploring new technologies and am open to exciting opportunities in Software Engineering and Data Science. Feel free to reach out!</p>
+            <a href="mailto:mohamed.bouleghlem@ensta.fr" class="btn btn-primary contact-btn">Say Hello</a>
+            
+            <div class="social-links">
+                <a href="https://github.com/siphux" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/mohamed-bouleghlem" target="_blank">LinkedIn</a>
+            </div>
+            <p class="copyright">&copy; 2026 Mohamed Bouleghlem. Designed & Built for the Future.</p>
         </div>
     </footer>
 
